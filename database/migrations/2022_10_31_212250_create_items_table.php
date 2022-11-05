@@ -18,7 +18,8 @@ class CreateItemsTable extends Migration
             $table->string('name', 100);
             $table->string('status', 50)->default('active');
             $table->string('body', 300);
-            $table->string('image', 100);
+            $table->string('type', 50);
+            $table->mediumText('image');
             $table->timestamps();
         });
     }
