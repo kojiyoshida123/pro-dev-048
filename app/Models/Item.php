@@ -30,14 +30,15 @@ class Item extends Model
     ];
 
         /**
-     * ユーザーを登録する。
+     * 商品を登録する。
      */
     public function InsertItem($request)
     {
         //create.blade.phpで入力された各情報を基にデータベースへ登録する。
 
-        $file_name = $request->item_image->getClientOriginalName();
-        $img = $request->item_image->storeAs('public', $file_name);
+        //$file_name = $request->item_image->getClientOriginalName();
+        //$img = $request->item_image->storeAs('public', $file_name);
+        $file_name = base64_encode(file_get_contents($request->item_image->getRealPath()));
 
         return $this->create([
             'name' => $request->item_name,
