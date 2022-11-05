@@ -15,7 +15,7 @@ class CreateItemsTable extends Migration
     {
         Schema::create('items', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100)->charset("utf8");
+            $table->string('name', 100);
             $table->string('status', 50)->default('active');
             $table->string('body', 300);
             $table->string('image', 100);
