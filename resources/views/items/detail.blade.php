@@ -13,7 +13,7 @@
                         <div class="d-flex justify-content-center">
                             ID: {{ $item->id }}
                         </div>
-                            <a class="d-flex justify-content-center"><img src="data:image/jpeg;base64,<?= $item["image"] ?>" class="w-50 rounded border border-3 border border-dark" alt="image"></a>
+                            <a class="d-flex justify-content-center"><img src="data:image/jpeg;base64,{{ $item->image }}" class="w-50 rounded border border-3 border border-dark" alt="image"></a>
                         <div class="d-flex justify-content-center">
                             < {{ $item->name}} >
                         </div>
